@@ -18,10 +18,48 @@ export const testSlice = createSlice({
     name: 'test',
     initialState,
     reducers: {
-        resetAllData: (state) => {
+        resetAllDataAction: (state) => {
             state = initialState;
         },
-        set
-    }
-})
+        setFirstNameAction: (state, action: PayloadAction<string>) => {
+            state.firstName = action.payload;
+        },
+        setLastNameAction: (state, action: PayloadAction<string>) => {
+            state.lastName = action.payload;
+        },
+        setPhoneAction: (state, action: PayloadAction<string>) => {
+            state.phone = action.payload;
+        },
+        setEmailAction: (state, action: PayloadAction<string>) => {
+            state.email = action.payload;
+        },
+        setCounterAction: (state, action: PayloadAction<number>) => {
+            state.counter = action.payload;
+        },
+        addCounterAction: (state, action?: PayloadAction<number>) => {
+            const value = action?.payload || 1;
+            const { counter } = state;
+            state.counter = counter ? (counter + value) : value;
+        },
+        reduceCounterAction: (state, action?: PayloadAction<number>) => {
+            const value = action?.payload || -1;
+            const { counter } = state;
+            state.counter = counter ? (counter + value) : value;
+        },
+        changeFlagAction: (state, action?: PayloadAction<boolean>) => {
+            state.flag = action?.payload ?? true;
+        },
+    },
+});
 
+export const {
+    resetAllDataAction,
+    setFirstNameAction,
+    setLastNameAction,
+    setPhoneAction,
+    setEmailAction,
+    setCounterAction,
+    addCounterAction,
+    reduceCounterAction,
+    changeFlagAction,
+} = testSlice.actions;
