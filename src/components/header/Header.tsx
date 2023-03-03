@@ -3,14 +3,8 @@ import "./Header.css";
 
 export const Header = () => {
   return (
-    <div className={"Header"}>
+    <header className={"Header"}>
       <div className={"Header-text"}>Test</div>
-    </div>
+    </header>
   );
-};
-
-const classNames = {
-  root: {
-    backgroundColor: "blue",
-  },
 };

@@ -1,9 +1,10 @@
 .Header {
     background-color: lightblue;
-    height: 5rem;
+    height: 10vh;
     border-bottom: 1px solid #888;
     box-shadow: 0 0.25rem 0.5rem grey;
     position: sticky;
+    z-index: 1;
     display: flex;
 }
 

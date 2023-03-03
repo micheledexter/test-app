@@ -1,0 +1,14 @@
+.Body {
+    background-color: lightgrey;
+    height: 80vh;
+    border-bottom: 1px solid #888;
+    box-shadow: 0 0.25rem 0.5rem grey;
+    position: sticky;
+    display: flex;
+
+}
+
+.Body-text {
+    margin-left: auto;
+    margin-right: auto;
+}
