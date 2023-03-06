@@ -1,12 +1,16 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import "./Body.css";
 import { Container } from "../shared/Container";
 
-export const Body = () => {
+type PropsWithChildren<P> = P & {
+  children?: ReactNode;
+};
+
+export const Body = ({ children }: PropsWithChildren<any>) => {
   return (
     <body className={"Body"}>
       <Container>
-        <div className={"Body-text"}>This is the body</div>
+        <div className={"Body-text"}>{children}</div>
       </Container>
     </body>
   );
